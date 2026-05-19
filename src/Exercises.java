@@ -12,7 +12,17 @@ public class Exercises {
      * @return the length of the list
      */
     public static int length(ListNode head) {
-        return -1;
+        if (head == null) {
+            return 0;
+        }
+
+        int count = 0;
+        // ListNode current = head;
+        while (head != null) {
+            count++;
+            head = head.next;
+        }
+        return count;
     }
 
     /**
